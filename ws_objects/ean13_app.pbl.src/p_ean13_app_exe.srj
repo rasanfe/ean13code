@@ -1,0 +1,18 @@
+﻿$PBExportHeader$p_ean13_app_exe.srj
+EXE:ean13_app.exe,,0,1,1,0,C:\Program Files (x86)\Appeon\Common\PowerBuilder\Runtime 22.0.0.1878
+CMP:0,0,0,3,0,0,1
+COM:RSRSYSTEM
+DES:Alternative Ean13 Zxing.dll NetCore
+CPY:Ramón San Félix Ramón
+PRD:Ean13_app
+PVS:2022.0.1878.1
+PVN:2022,0,1878,1
+FVS:2022.0.1878.1
+FVN:2022,0,1878,1
+MAN:0,asInvoker,0
+PBD:ean13_app.pbl,,1
+OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13_NetCore\ean13_app.pbl,nvo_zxingnetcoreclass,u
+OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13_NetCore\ean13_app.pbl,dw_products,d
+OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13_NetCore\ean13_app.pbl,nvo_barcode,u
+OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13_NetCore\ean13_app.pbl,ean13_app,a
+OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13_NetCore\ean13_app.pbl,w_ean13,w

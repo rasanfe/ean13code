@@ -1,0 +1,7 @@
+Save Format v3.0(19990112)
+@begin Targets
+ 0 "ean13_app.pbt";
+@end;
+DefaultTarget "ean13_app.pbt";
+DefaultExportEncode "UTF-8";
+DefaultRemoteTarget "ean13_app.pbt";
