@@ -192,7 +192,7 @@ string text = "New Barcode"
 end type
 
 event clicked;Long ll_Row, ll_RowCount
-String ls_barcode, ls_Productid
+String ls_barcode, ls_Productid, ls_country ="SPAIN"
 Integer li_year
 
 li_year = year(today())
@@ -202,8 +202,7 @@ ll_RowCount=dw_1.RowCount()
 FOR ll_Row = 1 to ll_RowCount
 	ls_Productid = dw_1.object.ProductId[ll_Row]
 	
-	ls_barcode = string(li_year)+fill("0", 8 - len(ls_Productid)) + ls_Productid
-	ls_barcode += io_ean13.of_ean13_control(ls_barcode)
+	ls_barcode = io_ean13.of_generate_ean13_code(ls_country, ls_Productid)
 	
 	dw_1.object.Ean13[ll_Row] = ls_barcode
 	
