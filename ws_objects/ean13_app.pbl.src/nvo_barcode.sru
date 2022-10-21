@@ -136,6 +136,10 @@ END IF
 
 ls_read = io_Zxing.of_readbarcode(as_FilePath)
 
+IF isnull(ls_read) or ls_read="" THEN
+	messagebox("Error", io_zxing.is_ErrorText, Stopsign!)
+END IF	
+
 RETURN ls_read
 
 end function
@@ -183,15 +187,16 @@ CHOOSE CASE Len( as_data )
 END CHOOSE 
 
 ls_result = io_zxing.of_barcodegenerate(as_data, ls_ean13, li_format, li_height, li_width, lb_PureBarcode, li_margin)
-	
-IF	NOT FileExists(ls_ean13) THEN
-	ls_ean13 =  ls_ean13_blanco
-END IF
 
+IF isnull(ls_result) or ls_result="" THEN ls_result=io_zxing.is_ErrorText
+	
 IF ls_result <> ls_ean13 THEN
 		messagebox("Error", ls_result, Stopsign!)
 END IF	
 
+IF	NOT FileExists(ls_ean13) THEN
+	ls_ean13 =  ls_ean13_blanco
+END IF
 
 RETURN ls_ean13
 end function
