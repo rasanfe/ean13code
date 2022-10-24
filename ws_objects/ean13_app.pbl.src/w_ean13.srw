@@ -170,10 +170,7 @@ io_ean13 = CREATE nvo_barcode
 
 end event
 
-event closequery;if not isPOwerClientApp() then
-	Disconnect USING SQLCA;
-end if	
-destroy io_ean13 
+event closequery;destroy io_ean13 
 end event
 
 type cb_1 from commandbutton within w_ean13
