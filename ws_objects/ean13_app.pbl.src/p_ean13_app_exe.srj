@@ -2,9 +2,9 @@
 EXE:ean13_app.exe,,0,1,1,0,C:\Program Files (x86)\Appeon\Common\PowerBuilder\Runtime 22.0.0.1878
 CMP:0,0,0,3,0,0,1
 COM:RSRSYSTEM
-DES:Alternative Ean13 Zxing.dll NetCore
+DES:Appeon Power Builder 2022 Product File 64Bits
 CPY:Ramón San Félix Ramón
-PRD:Ean13_app
+PRD:Ean13_app2022
 PVS:2022.0.1878.1
 PVN:2022,0,1878,1
 FVS:2022.0.1878.1
