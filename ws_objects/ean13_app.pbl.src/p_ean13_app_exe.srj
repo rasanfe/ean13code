@@ -5,14 +5,14 @@ COM:RSRSYSTEM
 DES:Appeon Power Builder 2022 Product File 64Bits
 CPY:Ramón San Félix Ramón
 PRD:Ean13_app2022
-PVS:2022.0.1878.1
-PVN:2022,0,1878,1
-FVS:2022.0.1878.1
-FVN:2022,0,1878,1
+PVS:2022.0.1878.2
+PVN:2022,0,1878,2
+FVS:2022.0.1878.2
+FVN:2022,0,1878,2
 MAN:0,asInvoker,0
 PBD:ean13_app.pbl,,1
-OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13_NetCore\ean13_app.pbl,nvo_zxingnetcoreclass,u
-OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13_NetCore\ean13_app.pbl,dw_products,d
-OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13_NetCore\ean13_app.pbl,nvo_barcode,u
-OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13_NetCore\ean13_app.pbl,ean13_app,a
-OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13_NetCore\ean13_app.pbl,w_ean13,w
+OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13_app\ean13_app.pbl,nvo_zxingnet6,u
+OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13_app\ean13_app.pbl,dw_products,d
+OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13_app\ean13_app.pbl,nvo_barcode,u
+OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13_app\ean13_app.pbl,w_ean13,w
+OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13_app\ean13_app.pbl,ean13_app,a
