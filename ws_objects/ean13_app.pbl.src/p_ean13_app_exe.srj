@@ -1,18 +1,18 @@
 ﻿$PBExportHeader$p_ean13_app_exe.srj
-EXE:ean13_app.exe,,0,1,1,0,C:\Program Files (x86)\Appeon\Common\PowerBuilder\Runtime 22.0.0.1892
+EXE:ean13_app.exe,,0,1,1,0,C:\Program Files (x86)\Appeon\Common\PowerBuilder\Runtime 22.0.0.1900
 CMP:0,0,0,3,0,0,1
 COM:RSRSYSTEM
 DES:Appeon Power Builder 2022 Product File 64Bits
 CPY:Ramón San Félix Ramón
 PRD:Ean13_app2022
-PVS:2022.0.1892.3
-PVN:2022,0,1892,3
-FVS:2022.0.1892.3
-FVN:2022,0,1892,3
+PVS:2022.0.1900.4
+PVN:2022,0,1900,4
+FVS:2022.0.1900.4
+FVN:2022,0,1900,4
 MAN:0,asInvoker,0
 PBD:ean13_app.pbl,,1
-OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13code\ean13_app.pbl,w_ean13,w
-OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13code\ean13_app.pbl,nvo_barcode,u
-OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13code\ean13_app.pbl,dw_products,d
-OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13code\ean13_app.pbl,nvo_zxingnet6,u
-OBJ:C:\projecto pw2022\Blog\PowerBuilder\ean13code\ean13_app.pbl,ean13_app,a
+OBJ:C:\proyecto pw2022\Blog\PowerBuilder\ean13code\ean13_app.pbl,dw_products,d
+OBJ:C:\proyecto pw2022\Blog\PowerBuilder\ean13code\ean13_app.pbl,nvo_zxingnet6,u
+OBJ:C:\proyecto pw2022\Blog\PowerBuilder\ean13code\ean13_app.pbl,nvo_barcode,u
+OBJ:C:\proyecto pw2022\Blog\PowerBuilder\ean13code\ean13_app.pbl,w_ean13,w
+OBJ:C:\proyecto pw2022\Blog\PowerBuilder\ean13code\ean13_app.pbl,ean13_app,a
