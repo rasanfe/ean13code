@@ -12,7 +12,7 @@ global nvo_zxingnet6 nvo_zxingnet6
 type variables
 
 PUBLIC:
-String is_assemblypath = "ZxingBarcode.dll"
+String is_assemblypath = gs_AppDir + "ZxingNet6\ZxingBarcode.dll"
 String is_classname = "ZxingBarcode.ZxingNet6"
 
 /* Exception handling -- Indicates how proxy handles .NET exceptions */
@@ -308,11 +308,11 @@ end function
 
 on nvo_zxingnet6.create
 call super::create
-triggerevent( this, "constructor" )
+TriggerEvent( this, "constructor" )
 end on
 
 on nvo_zxingnet6.destroy
-triggerevent( this, "destructor" )
+TriggerEvent( this, "destructor" )
 call super::destroy
 end on
 

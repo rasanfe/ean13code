@@ -10,6 +10,10 @@ global error error
 global message message
 end forward
 
+global variables
+String gs_AppDir
+end variables
+
 global type ean13_app from application
 string appname = "ean13_app"
 string themepath = "C:\Program Files (x86)\Appeon\PowerBuilder 22.0\IDE\theme"
@@ -25,8 +29,13 @@ string appicon = "icono.ico"
 string appruntimeversion = "22.2.0.3289"
 boolean manualsession = false
 boolean unsupportedapierror = false
+boolean ultrafast = false
 boolean bignoreservercertificate = false
 uint ignoreservercertificate = 0
+long webview2distribution = 0
+boolean webview2checkx86 = false
+boolean webview2checkx64 = false
+string webview2url = "https://developer.microsoft.com/en-us/microsoft-edge/webview2/"
 end type
 global ean13_app ean13_app
 
@@ -47,6 +56,7 @@ destroy(error)
 destroy(message)
 end on
 
-event open;open(w_ean13)
+event open;gs_AppDir = GetCurrentDirectory() +"\"
+open(w_ean13)
 end event
 

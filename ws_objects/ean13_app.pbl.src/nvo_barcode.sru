@@ -99,14 +99,15 @@ CONSTANT Integer PHARMA_CODE = 21
         //     tested, and it looks more like a 2D)  -->ONLY FOR DECODE
 CONSTANT Integer   All_1D = 22
 end variables
+
 forward prototypes
 private function boolean of_ean13_check (string as_code)
 public function string of_read_ean13 (string as_filepath)
 public function string of_build_ean13 (string as_data)
-public function boolean of_control_dependencies ()
 private function string of_country_code (string as_country_name)
 private function string of_ean13_control (string as_code)
 public function string of_generate_ean13_code (string as_country, string as_productid)
+public function boolean of_dependencies_control ()
 end prototypes
 
 private function boolean of_ean13_check (string as_code);String ls_check
@@ -124,7 +125,7 @@ end function
 
 public function string of_read_ean13 (string as_filepath);String ls_read
 
-if not of_control_dependencies() then
+if not of_dependencies_control() then
 	Return ls_read
 end if	
 
@@ -149,7 +150,7 @@ Integer li_width, li_height, li_margin, li_format
 Boolean lb_PureBarcode
 String ls_result
 
-if not of_control_dependencies() then
+if not of_dependencies_control() then
 	Return ls_ean13_blanco
 end if	
 
@@ -198,28 +199,6 @@ IF	NOT FileExists(ls_ean13) THEN
 END IF
 
 RETURN ls_ean13
-end function
-
-public function boolean of_control_dependencies ();String ls_path
-
-ls_path = GetCurrentDirectory()
-
-if not FileExists( ls_path +"\ZxingBarcode.dll") then
-	messagebox("Error","¡ You need the ZxingBarcode.dll File to generate the Ean13 !", exclamation!)
-	Return False
-end if	
-
-if not FileExists( ls_path +"\zxing.dll") then
-	messagebox("Error", "¡ You need the  zxing.dll File to generate the Ean13 !", exclamation!)
-	Return False
-end if	
-
-if not FileExists( ls_path +"\System.Drawing.Common.dll") then
-	messagebox("Error", "¡ You need the  System.Drawing.Common.dll File to generate the Ean13 !", exclamation!)
-	Return False
-end if	
-
-return true
 end function
 
 private function string of_country_code (string as_country_name);String as_country_code
@@ -465,6 +444,23 @@ ls_control_digit = of_ean13_control(ls_ean13)
 ls_ean13 += ls_control_digit 
 
 RETURN ls_ean13
+end function
+
+public function boolean of_dependencies_control ();String ls_files[]
+Int li_File, li_TotalFiles
+
+ls_files[]={"ZxingBarcode.deps.json", "ZxingBarcode.dll", "zxing.dll", "ZXing.Windows.Compatibility.dll", "System.Drawing.Common.dll", "Microsoft.Win32.SystemEvents.dll"}
+
+li_TotalFiles = UpperBound(ls_files[])
+
+FOR li_File = 1 TO li_TotalFiles
+	IF NOT FileExists(gs_appdir+"ZxingNet6\"+ls_files[li_File]) THEN
+		MessageBox ("Atención", "¡ You need the "+ls_files[li_File]+" File to generate the Ean13 !", Exclamation!)
+		Return FALSE
+	END IF
+NEXT	
+
+Return TRUE
 end function
 
 on nvo_barcode.create
