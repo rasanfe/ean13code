@@ -9,7 +9,7 @@ end type
 global nvo_barcode nvo_barcode
 
 type variables
-nvo_zxingnet6 io_zxing
+nvo_zxingnet8 io_zxing
 
 CONSTANT Integer AZTEC = 1
         //
@@ -454,7 +454,7 @@ ls_files[]={"ZxingBarcode.deps.json", "ZxingBarcode.dll", "zxing.dll", "ZXing.Wi
 li_TotalFiles = UpperBound(ls_files[])
 
 FOR li_File = 1 TO li_TotalFiles
-	IF NOT FileExists(gs_appdir+"ZxingNet6\"+ls_files[li_File]) THEN
+	IF NOT FileExists(gs_appdir+"ZxingNet8\"+ls_files[li_File]) THEN
 		MessageBox ("Atención", "¡ You need the "+ls_files[li_File]+" File to generate the Ean13 !", Exclamation!)
 		Return FALSE
 	END IF
@@ -473,7 +473,7 @@ TriggerEvent( this, "destructor" )
 call super::destroy
 end on
 
-event constructor;io_zxing = CREATE nvo_zxingnet6
+event constructor;io_zxing = CREATE nvo_zxingnet8
 end event
 
 event destructor;destroy io_zxing 
