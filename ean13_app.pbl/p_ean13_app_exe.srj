@@ -1,0 +1,18 @@
+﻿EXE:ean13_app.exe,,0,1,1,0,C:\Program Files (x86)\Appeon\Common\PowerBuilder\Runtime 25.0.0.3683
+CMP:0,0,0,3,0,0,1
+COM:RSRSYSTEM
+DES:Appeon Power Builder 2025 Product File 64Bits
+CPY:Ramón San Félix Ramón
+PRD:Ean13_app2025
+PVS:2025.1.3683.11
+PVN:2025,1,3683,11
+FVS:2025.1.3683.11
+FVN:2025,1,3683,11
+MAN:0,asInvoker,0
+PBD:ean13_app.pbl,,1
+PBD:dotnet.pbl,,1
+OBJ:C:\proyecto pw2025\Blog\PowerBuilder\ean13code\ean13_app.pbl,dw_products,d
+OBJ:C:\proyecto pw2025\Blog\PowerBuilder\ean13code\ean13_app.pbl,nvo_barcode,u
+OBJ:C:\proyecto pw2025\Blog\PowerBuilder\ean13code\ean13_app.pbl,ean13_app,a
+OBJ:C:\proyecto pw2025\Blog\PowerBuilder\ean13code\dotnet.pbl,nvo_zxingnet8,u
+OBJ:C:\proyecto pw2025\Blog\PowerBuilder\ean13code\ean13_app.pbl,w_ean13,w

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Project>
+  <Type Name="pb"/>
+  <Application Name="ean13_app"/>
+  <Libraries AppEntry="ean13_app.pbl">
+    <Library Path="ean13_app.pbl"/>
+    <Library Path="dotnet.pbl"/>
+  </Libraries>
+</Project>
