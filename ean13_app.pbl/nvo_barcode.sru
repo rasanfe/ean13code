@@ -8,7 +8,7 @@ end type
 global nvo_barcode nvo_barcode
 
 type variables
-nvo_zxingnet8 io_zxing
+nvo_zxingnet io_zxing
 
 CONSTANT Integer AZTEC = 1
         //
@@ -472,7 +472,7 @@ TriggerEvent( this, "destructor" )
 call super::destroy
 end on
 
-event constructor;io_zxing = CREATE nvo_zxingnet8
+event constructor;io_zxing = CREATE nvo_zxingnet
 end event
 
 event destructor;destroy io_zxing 
